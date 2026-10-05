@@ -77,11 +77,11 @@ The membership form on the website will:
 
 1. After deployment, you'll see a dialog with the **Web app URL**
 2. It will look like: `https://script.google.com/macros/s/xxxxx.../exec`
-3. **Copy this URL** - you'll need to provide it to your developer
+3. **Copy this URL** - you'll need to provide it to Jose
 
-## Step 7: Provide URL to Developer
+## Step 7: Provide URL to Jose
 
-Send the Web App URL to your developer so they can update the website code.
+Send the Web App URL to Jose so they can update the website code.
 
 ---
 
@@ -96,7 +96,7 @@ Send the Web App URL to your developer so they can update the website code.
 
 ### Test from the Website
 
-1. After the developer updates the website with your URL
+1. After Jose updates the website with your URL
 2. Go to the membership page
 3. Fill out the form with test data
 4. Submit the form
@@ -168,4 +168,4 @@ The current setup stores subscription preferences as TRUE/FALSE values, making i
 - Integrate with email marketing tools (Mailchimp, SendGrid, etc.)
 - Add automated newsletter functionality
 
-Contact your developer when ready to implement these features.
+Contact me when ready to implement these features.

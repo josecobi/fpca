@@ -4,6 +4,9 @@ import { getEntry } from 'astro:content';
 
 // Fetch site settings
 const settings = await getEntry('settings', 'settings');
+if (!settings) {
+  throw new Error('Settings not found');
+}
 const {
   contactAddress,
   contactAddressLine2,

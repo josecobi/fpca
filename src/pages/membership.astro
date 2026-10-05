@@ -4,6 +4,9 @@ import { getEntry } from 'astro:content';
 
 // Fetch site settings
 const settings = await getEntry('settings', 'settings');
+if (!settings) {
+  throw new Error('Settings not found');
+}
 const {
   membershipPrice,
   membershipPriceModel,
@@ -409,10 +412,10 @@ const {
 
   <script>
     // Google Apps Script Web App URL
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyX1K6lAIIsIzZcBi40UdDCEVDLoUqWyFP636maIlzpnV6goivtEsAoNKGrJxKwFZc7/exec';
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyfpbmQtEGm4WT3cFgaQMOnyXb2_e87NW5IVcVihUTnKvB6SBg7bLOvTxkKXFrY1d7L/exec';
 
-    const form = document.getElementById('membershipForm');
-    const submitBtn = document.getElementById('submitBtn');
+    const form = document.getElementById('membershipForm') as HTMLFormElement | null;
+    const submitBtn = document.getElementById('submitBtn') as HTMLButtonElement | null;
     const submitText = document.getElementById('submitText');
     const submitLoading = document.getElementById('submitLoading');
     const successMessage = document.getElementById('successMessage');

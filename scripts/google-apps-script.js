@@ -52,19 +52,33 @@ function doGet() {
 }
 
 function sendNotificationEmail(data, formattedDate) {
+  var spreadsheetUrl = 'https://docs.google.com/spreadsheets/d/' + SPREADSHEET_ID + '/edit';
+
   var body = 'New Membership Application Received\n\n';
   body += 'Submitted: ' + formattedDate + '\n\n';
   body += '--- APPLICANT INFO ---\n';
   body += 'Name: ' + (data.firstName || '') + ' ' + (data.lastName || '') + '\n';
   body += 'Address: ' + (data.address || 'Not provided') + '\n';
   body += 'Email: ' + (data.email || 'Not provided') + '\n\n';
+
+  // Only show subscriptions they opted into
+  var subscriptions = [];
+  if (data.SubscribeNewsletter) subscriptions.push('Newsletter');
+  if (data.SubscribeUpdates) subscriptions.push('City Updates');
+  if (data.SubscribeEvents) subscriptions.push('Events');
+
   body += '--- SUBSCRIPTIONS ---\n';
-  body += (data.SubscribeNewsletter ? '[YES]' : '[NO]') + ' Newsletter\n';
-  body += (data.SubscribeUpdates ? '[YES]' : '[NO]') + ' City Updates\n';
-  body += (data.SubscribeEvents ? '[YES]' : '[NO]') + ' Events\n\n';
+  if (subscriptions.length > 0) {
+    body += '• ' + subscriptions.join('\n• ') + '\n\n';
+  } else {
+    body += 'None selected\n\n';
+  }
+
   body += '--- ADDITIONAL ---\n';
   body += 'Volunteer: ' + (data.volunteering || 'None') + '\n';
-  body += 'Found FPCA: ' + (data.referral || 'Not specified') + '\n';
+  body += 'Found FPCA: ' + (data.referral || 'Not specified') + '\n\n';
+  body += '--- VIEW ALL SUBMISSIONS ---\n';
+  body += spreadsheetUrl + '\n';
 
   GmailApp.sendEmail(
     NOTIFICATION_EMAIL,

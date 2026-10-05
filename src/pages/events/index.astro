@@ -5,6 +5,9 @@ import { getCollection, getEntry } from 'astro:content';
 
 // Fetch site settings for calendar
 const settings = await getEntry('settings', 'settings');
+if (!settings) {
+  throw new Error('Settings not found');
+}
 const { googleCalendarEmbedUrl } = settings.data;
 
 // Get all events
