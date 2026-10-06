@@ -15,10 +15,25 @@ pnpm-debug.log*
 
 # environment variables
 .env
-.env.production
+.env.*
+!.env.example
 
-# macOS-specific files
+# logs
+*.log
+
+# OS / editor files
 .DS_Store
+Thumbs.db
+*.swp
 
 # jetbrains setting folder
 .idea/
+
+# local tooling (not for the client repo)
+.claude/
+.agents/
+skills-lock.json
+tutorials/
+
+# internal prep notes
+meeting-agenda-context.md
