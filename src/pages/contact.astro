@@ -16,8 +16,12 @@ const {
   contactEmail,
   meetingFrequency,
   meetingTime,
-  meetingLocation
+  meetingLocation,
+  socialFacebook,
+  socialTwitter,
+  socialInstagram
 } = settings.data;
+const hasSocial = Boolean(socialFacebook || socialTwitter || socialInstagram);
 ---
 
 <Layout
@@ -185,6 +189,7 @@ const {
               </div>
             </div>
 
+            {hasSocial && (
             <div class="flex items-start">
               <div class="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background-color: rgba(197, 157, 95, 0.15);">
                 <svg class="w-6 h-6" style="color: #D4A574;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -194,18 +199,19 @@ const {
               <div>
                 <h3 class="text-lg font-semibold mb-1" style="color: #3D3D3D;">Social Media</h3>
                 <div class="flex space-x-4 mt-2">
-                  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="transition-colors" style="color: #3D3D3D;" onmouseover="this.style.color='#C1503D'" onmouseout="this.style.color='#3D3D3D'">
+                  {socialFacebook && <a href={socialFacebook} target="_blank" rel="noopener noreferrer" class="transition-colors" style="color: #3D3D3D;" onmouseover="this.style.color='#C1503D'" onmouseout="this.style.color='#3D3D3D'">
                     Facebook
-                  </a>
-                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="transition-colors" style="color: #3D3D3D;" onmouseover="this.style.color='#C1503D'" onmouseout="this.style.color='#3D3D3D'">
+                  </a>}
+                  {socialTwitter && <a href={socialTwitter} target="_blank" rel="noopener noreferrer" class="transition-colors" style="color: #3D3D3D;" onmouseover="this.style.color='#C1503D'" onmouseout="this.style.color='#3D3D3D'">
                     Twitter
-                  </a>
-                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="transition-colors" style="color: #3D3D3D;" onmouseover="this.style.color='#C1503D'" onmouseout="this.style.color='#3D3D3D'">
+                  </a>}
+                  {socialInstagram && <a href={socialInstagram} target="_blank" rel="noopener noreferrer" class="transition-colors" style="color: #3D3D3D;" onmouseover="this.style.color='#C1503D'" onmouseout="this.style.color='#3D3D3D'">
                     Instagram
-                  </a>
+                  </a>}
                 </div>
               </div>
             </div>
+            )}
           </div>
 
           <!-- Meeting Info -->

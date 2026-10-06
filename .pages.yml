@@ -648,6 +648,42 @@ content:
         placeholder: '<iframe src="https://calendar.google.com/calendar/embed?src=..." style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>'
 
       # ============================================
+      # SOCIAL MEDIA LINKS (/contact and /newsletter)
+      # ============================================
+
+      - name: socialFacebook
+        label: '🔗 Facebook Link — Used on: /contact, /newsletter'
+        type: string
+        required: false
+        hint: 'Full URL of the FPCA Facebook page (must start with https://). Leave blank to hide this link on the website.'
+        pattern: '^$|^https?://.*'
+        placeholder: 'https://www.facebook.com/your-page'
+
+      - name: socialTwitter
+        label: '🔗 Twitter / X Link — Used on: /contact, /newsletter'
+        type: string
+        required: false
+        hint: 'Full URL of the FPCA Twitter / X page (must start with https://). Leave blank to hide this link on the website.'
+        pattern: '^$|^https?://.*'
+        placeholder: 'https://x.com/your-account'
+
+      - name: socialInstagram
+        label: '🔗 Instagram Link — Used on: /contact, /newsletter'
+        type: string
+        required: false
+        hint: 'Full URL of the FPCA Instagram page (must start with https://). Leave blank to hide this link on the website.'
+        pattern: '^$|^https?://.*'
+        placeholder: 'https://www.instagram.com/your-account'
+
+      - name: socialLinkedin
+        label: '🔗 LinkedIn Link — Used on: /contact, /newsletter'
+        type: string
+        required: false
+        hint: 'Full URL of the FPCA LinkedIn page (must start with https://). Leave blank to hide this link on the website.'
+        pattern: '^$|^https?://.*'
+        placeholder: 'https://www.linkedin.com/company/your-page'
+
+      # ============================================
       # DONATE PAGE SETTINGS (/donate)
       # ============================================
       # The "Annual Membership" amount on /donate comes from the Membership Price above.

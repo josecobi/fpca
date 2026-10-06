@@ -40,6 +40,7 @@ Name, phone number, category, description, "Highlight" checkbox, and display ord
 | Address (2 lines), city, state, ZIP | `/contact` |
 | Contact email | `/contact` and the site footer |
 | Family, Business Supporter, and Community Champion amounts | `/donate` |
+| Facebook, Twitter / X, Instagram, LinkedIn links (leave blank to hide) | `/contact` (all but LinkedIn) and `/newsletter` |
 | Meeting frequency, time, location | `/contact` and `/events` (the "General Membership Meetings" section) |
 | Mission statement | `/about` |
 | Google Calendar embed code | `/events` |
@@ -61,7 +62,7 @@ Upload photos and PDFs for use in any of the content above.
 - **Donate / Support Us** (`/donate`): the entire page, including the four support levels. The amounts on the four cards come from Site Settings (Annual Membership uses the Membership Price); the card names, descriptions, and benefit lists are built in
 - **Volunteer** (`/volunteer`): the entire page, including the list of volunteer opportunities, benefits, and testimonials
 - **Newsletter** (`/newsletter`) and **Team** (`/team`): the entire page
-- **Contact** (`/contact`): the contact form's fields and subject list, the social media links, and the "Looking for Something Specific?" links
+- **Contact** (`/contact`): the contact form's fields and subject list, and the "Looking for Something Specific?" links
 - **Documents, Blog, Events** listing pages: titles, intro text, filter labels, and "nothing here yet" messages
 - **Resources** (`/resources`): the page title, the 311 call-out box (including the 311 phone number), and the section headings
 
@@ -82,7 +83,7 @@ Upload photos and PDFs for use in any of the content above.
 ## ⚠️ Things to know
 
 - **The Donate page's "Family Membership" card** still describes household pricing, which doesn't match the per-person model on `/membership`. You can change its amount in Site Settings, but its wording is built in.
-- **Social media links** on `/contact` currently point to the generic Facebook, Twitter, and Instagram home pages.
+- **Social media links are blank.** Until you enter the real page URLs in Site Settings, no social links show on `/contact` or `/newsletter`.
 - **The contact form and newsletter form** are not yet connected to a form service.
 
 If you'd like any of the built-in items to become editable, ask your developer. Most of them can be moved into the CMS.

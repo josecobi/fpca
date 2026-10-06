@@ -141,6 +141,12 @@ const settingsCollection = defineCollection({
     // Events page
     googleCalendarEmbedUrl: z.string().optional(),
 
+    // Social media links (blank hides the link)
+    socialFacebook: z.union([z.string().url(), z.literal('')]).optional(),
+    socialTwitter: z.union([z.string().url(), z.literal('')]).optional(),
+    socialInstagram: z.union([z.string().url(), z.literal('')]).optional(),
+    socialLinkedin: z.union([z.string().url(), z.literal('')]).optional(),
+
     // Donate page support-level amounts (text so values like "$250+" work)
     donateFamilyAmount: z.string().default('$30'),
     donateBusinessAmount: z.string().default('$100'),
