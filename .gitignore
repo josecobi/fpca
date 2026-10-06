@@ -40,3 +40,6 @@ meeting-agenda-context.md
 
 # stray nested path created by a bad copy
 /Documents/
+
+# PDFs kept locally, not tracked
+/public/documents/
