@@ -213,15 +213,8 @@ content:
         type: string
         required: false
         hint: 'Email address (e.g., name@example.com). Leave blank if not public.'
-        pattern: '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+        pattern: '^$|^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
         placeholder: 'name@example.com'
-      - name: linkedin
-        label: LinkedIn Profile
-        type: string
-        required: false
-        hint: 'Full URL only (e.g., https://www.linkedin.com/in/username). Leave blank if none.'
-        pattern: '^https?://.*'
-        placeholder: 'https://www.linkedin.com/in/username'
       - name: order
         label: Display Order
         type: number
@@ -267,6 +260,7 @@ content:
           values:
             - Meeting Minutes
             - Governance Documents
+            - Newsletter
       - name: documentFile
         label: PDF Link (Google Drive or Dropbox)
         type: string

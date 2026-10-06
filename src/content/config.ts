@@ -47,7 +47,6 @@ const teamCollection = defineCollection({
     image: z.string().optional(),
     imageAlt: z.string().optional(),
     email: z.string().email().optional().or(z.literal('')),
-    linkedin: z.union([z.string().url(), z.literal('')]).optional(),
     order: z.number().default(0),
   }),
 });
@@ -59,7 +58,7 @@ const documentsCollection = defineCollection({
     title: z.string(),
     description: z.string(),
     documentDate: z.date(),
-    category: z.enum(['Meeting Minutes', 'Governance Documents']),
+    category: z.enum(['Meeting Minutes', 'Governance Documents', 'Newsletter']),
     documentFile: z.string(), // Path to PDF file
     fileSize: z.string().optional(), // e.g., "2.3 MB"
     featured: z.boolean().default(false),
