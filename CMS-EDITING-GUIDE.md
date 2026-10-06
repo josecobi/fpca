@@ -40,7 +40,7 @@ Name, phone number, category, description, "Highlight" checkbox, and display ord
 | Address (2 lines), city, state, ZIP | `/contact` |
 | Contact email | `/contact` and the site footer |
 | Family, Business Supporter, and Community Champion amounts | `/donate` |
-| Facebook, Twitter / X, Instagram, LinkedIn links (leave blank to hide) | `/contact` (all but LinkedIn) and `/newsletter` |
+| Facebook, Twitter / X, Instagram links (leave blank to hide) | `/contact` and `/newsletter` |
 | Meeting frequency, time, location | `/contact` and `/events` (the "General Membership Meetings" section) |
 | Mission statement | `/about` |
 | Google Calendar embed code | `/events` |

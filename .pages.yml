@@ -675,14 +675,6 @@ content:
         pattern: '^$|^https?://.*'
         placeholder: 'https://www.instagram.com/your-account'
 
-      - name: socialLinkedin
-        label: '🔗 LinkedIn Link — Used on: /contact, /newsletter'
-        type: string
-        required: false
-        hint: 'Full URL of the FPCA LinkedIn page (must start with https://). Leave blank to hide this link on the website.'
-        pattern: '^$|^https?://.*'
-        placeholder: 'https://www.linkedin.com/company/your-page'
-
       # ============================================
       # DONATE PAGE SETTINGS (/donate)
       # ============================================

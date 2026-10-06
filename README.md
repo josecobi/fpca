@@ -139,7 +139,7 @@ Manage events with:
 Add team profiles with:
 - Name and role
 - Short bio and profile photo
-- Contact information (email, LinkedIn)
+- Contact information (email)
 - Display order
 - Extended biography
 
