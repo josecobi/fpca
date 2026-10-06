@@ -8,7 +8,9 @@ const settings = await getEntry('settings', 'settings');
 if (!settings) {
   throw new Error('Settings not found');
 }
-const { googleCalendarEmbedUrl } = settings.data;
+const { googleCalendarEmbedUrl, meetingFrequency, meetingTime, meetingLocation } = settings.data;
+// Lowercase the first letter so the setting reads naturally mid-sentence
+const meetingFrequencyInline = meetingFrequency.charAt(0).toLowerCase() + meetingFrequency.slice(1);
 
 // Get all events
 const allEvents = await getCollection('events');
@@ -83,7 +85,7 @@ const featuredEvents = allEvents.filter(event => {
 
           <div class="max-w-3xl mx-auto text-center mb-10">
             <p class="text-xl md:text-2xl mb-8 leading-relaxed" style="color: #EFE9DC;">
-              General Membership Meetings are held on the <strong>last Thursday of each month</strong> at <strong>Kisling's Tavern (Upstairs)</strong> beginning at <strong>7:00PM</strong>.
+              General Membership Meetings are held on the <strong>{meetingFrequencyInline}</strong> at <strong>{meetingLocation}</strong> beginning at <strong>{meetingTime}</strong>.
             </p>
             <p class="text-lg italic" style="color: #C1503D;">
               Unless otherwise noted.
@@ -103,7 +105,7 @@ const featuredEvents = allEvents.filter(event => {
           <!-- Location Info -->
           <div class="mt-10 p-6 rounded-xl text-center" style="background-color: rgba(250, 248, 244, 0.1); border: 2px solid #D4A574;">
             <p class="text-lg font-semibold mb-2" style="color: #D4A574;">
-              📍 Kisling's Tavern (Upstairs)
+              📍 {meetingLocation}
             </p>
             <p style="color: #EFE9DC;">
               Join us for our monthly meetings and help shape the future of our community!

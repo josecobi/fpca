@@ -1,4 +1,11 @@
 ---
+import { getEntry } from 'astro:content';
+
+const settings = await getEntry('settings', 'settings');
+if (!settings) {
+  throw new Error('Settings not found');
+}
+const { contactEmail } = settings.data;
 const currentYear = new Date().getFullYear();
 ---
 
@@ -59,8 +66,8 @@ const currentYear = new Date().getFullYear();
         <ul class="space-y-2 text-sm">
           <li>
             <span class="block font-semibold" style="color: #F5F1E8;">Email:</span>
-            <a href="mailto:President@FellsProspectCommunity.org" class="transition-colors" style="color: #EFE9DC;" onmouseover="this.style.color='#C1503D'" onmouseout="this.style.color='#EFE9DC'">
-              President@FellsProspectCommunity.org
+            <a href={`mailto:${contactEmail}`} class="transition-colors" style="color: #EFE9DC;" onmouseover="this.style.color='#C1503D'" onmouseout="this.style.color='#EFE9DC'">
+              {contactEmail}
             </a>
           </li>
         </ul>

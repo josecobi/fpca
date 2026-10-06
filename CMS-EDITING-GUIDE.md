@@ -36,9 +36,10 @@ Name, phone number, category, description, "Highlight" checkbox, and display ord
 
 | Setting | Where it appears |
 |---|---|
-| Membership price, price model, year, renewal period, optional note, PayPal link | `/membership` |
-| Address (2 lines), city, state, ZIP, contact email | `/contact` |
-| Meeting frequency, time, location | `/contact` (the "General Membership Meetings" box only) |
+| Membership price, price model, year, renewal period, optional note, PayPal link | `/membership` (also the price in its search-result description) and the "Annual Membership" price on `/donate` |
+| Address (2 lines), city, state, ZIP | `/contact` |
+| Contact email | `/contact` and the site footer |
+| Meeting frequency, time, location | `/contact` and `/events` (the "General Membership Meetings" section) |
 | Mission statement | `/about` |
 | Google Calendar embed code | `/events` |
 
@@ -56,7 +57,7 @@ Upload photos and PDFs for use in any of the content above.
 - **Committees** (`/committees`): page title and the "Want to Get Involved?" banner
 - **Membership** (`/membership`): the hero text and everything except the price/year/renewal/note/PayPal link above, including the "Voting Rights", "Open to All", and "Tax Deductible" boxes, the eligibility text, the sponsorship callout, and the application form's wording and fields
 - **Sponsorship** (`/sponsorship`): the entire page
-- **Donate / Support Us** (`/donate`): the entire page, including the four support levels and their prices ($20, $30, $100, $250+)
+- **Donate / Support Us** (`/donate`): the entire page, including the four support levels. Only the "Annual Membership" price comes from Site Settings; the other prices ($30, $100, $250+) are built in
 - **Volunteer** (`/volunteer`): the entire page, including the list of volunteer opportunities, benefits, and testimonials
 - **Newsletter** (`/newsletter`) and **Team** (`/team`): the entire page
 - **Contact** (`/contact`): the contact form's fields and subject list, the social media links, and the "Looking for Something Specific?" links
@@ -65,7 +66,7 @@ Upload photos and PDFs for use in any of the content above.
 
 ### Site-wide elements
 - **Navigation menu**: menu names and which pages they link to
-- **Footer**: the description, quick links, email address, and the "Business Sponsorship" banner
+- **Footer**: the description, quick links, and the "Business Sponsorship" banner (the footer email comes from Site Settings)
 - **Page titles and descriptions** shown in browser tabs and Google results
 - **Colors, fonts, logo, and layout**
 - **Images that are part of the design** (fox graphic, header graphic, neighborhood map)
@@ -79,9 +80,7 @@ Upload photos and PDFs for use in any of the content above.
 
 ## ⚠️ Things to know
 
-- **Meeting info appears in two places.** Editing "Meeting Frequency / Time / Location" in Site Settings updates `/contact` only. The sentence at the top of `/events` ("last Thursday of each month at Kisling's Tavern…") is built in, so it won't change.
-- **The contact email appears in two places.** Site Settings updates `/contact`. The email in the site footer is built in.
-- **The Donate page prices differ from Membership.** `/donate` still shows $20 and $30 levels, while `/membership` shows the price from Site Settings.
+- **The Donate page's other tiers don't match Membership.** The "Family Membership" ($30) tier is built in and doesn't match the per-person model on `/membership`.
 - **Social media links** on `/contact` currently point to the generic Facebook, Twitter, and Instagram home pages.
 - **The contact form and newsletter form** are not yet connected to a form service.
 

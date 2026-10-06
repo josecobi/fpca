@@ -1,10 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getEntry } from 'astro:content';
+
+const settings = await getEntry('settings', 'settings');
+if (!settings) {
+  throw new Error('Settings not found');
+}
+const { membershipPrice } = settings.data;
 
 const supportOptions = [
   {
     name: 'Annual Membership',
-    amount: '$20',
+    amount: `$${membershipPrice}`,
     description: 'Support our community association with an annual membership. Voting rights at general meetings included.',
     benefits: [
       'Voting rights at meetings',
