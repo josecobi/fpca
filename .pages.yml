@@ -648,6 +648,35 @@ content:
         placeholder: '<iframe src="https://calendar.google.com/calendar/embed?src=..." style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>'
 
       # ============================================
+      # DONATE PAGE SETTINGS (/donate)
+      # ============================================
+      # The "Annual Membership" amount on /donate comes from the Membership Price above.
+
+      - name: donateFamilyAmount
+        label: '🎁 Family Membership Amount — Used on: /donate'
+        type: string
+        required: true
+        hint: 'Amount shown on the "Family Membership" card on the Donate page. Include the dollar sign (e.g., "$30").'
+        max: 20
+        placeholder: '$30'
+
+      - name: donateBusinessAmount
+        label: '🎁 Business Supporter Amount — Used on: /donate'
+        type: string
+        required: true
+        hint: 'Amount shown on the "Business Supporter" card on the Donate page. Include the dollar sign (e.g., "$100").'
+        max: 20
+        placeholder: '$100'
+
+      - name: donateChampionAmount
+        label: '🎁 Community Champion Amount — Used on: /donate'
+        type: string
+        required: true
+        hint: 'Amount shown on the "Community Champion" card on the Donate page. Include the dollar sign; a plus sign is fine (e.g., "$250+").'
+        max: 20
+        placeholder: '$250+'
+
+      # ============================================
       # ADMIN NOTES (Not displayed on website)
       # ============================================
 

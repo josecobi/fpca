@@ -141,6 +141,11 @@ const settingsCollection = defineCollection({
     // Events page
     googleCalendarEmbedUrl: z.string().optional(),
 
+    // Donate page support-level amounts (text so values like "$250+" work)
+    donateFamilyAmount: z.string().default('$30'),
+    donateBusinessAmount: z.string().default('$100'),
+    donateChampionAmount: z.string().default('$250+'),
+
     // Board categories (for the team member dropdown)
     boardCategories: z.union([
       z.array(z.string()),

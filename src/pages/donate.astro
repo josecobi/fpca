@@ -6,7 +6,7 @@ const settings = await getEntry('settings', 'settings');
 if (!settings) {
   throw new Error('Settings not found');
 }
-const { membershipPrice } = settings.data;
+const { membershipPrice, donateFamilyAmount, donateBusinessAmount, donateChampionAmount } = settings.data;
 
 const supportOptions = [
   {
@@ -21,7 +21,7 @@ const supportOptions = [
   },
   {
     name: 'Family Membership',
-    amount: '$30',
+    amount: donateFamilyAmount,
     description: 'Family membership for households. Two voting members included.',
     benefits: [
       'Two voting members',
@@ -32,7 +32,7 @@ const supportOptions = [
   },
   {
     name: 'Business Supporter',
-    amount: '$100',
+    amount: donateBusinessAmount,
     description: 'For local businesses who want to support the community association.',
     benefits: [
       'Business listing on website',
@@ -42,7 +42,7 @@ const supportOptions = [
   },
   {
     name: 'Community Champion',
-    amount: '$250+',
+    amount: donateChampionAmount,
     description: 'Extra support for special projects and community initiatives.',
     benefits: [
       'All business benefits',

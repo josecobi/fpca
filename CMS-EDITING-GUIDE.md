@@ -39,6 +39,7 @@ Name, phone number, category, description, "Highlight" checkbox, and display ord
 | Membership price, price model, year, renewal period, optional note, PayPal link | `/membership` (also the price in its search-result description) and the "Annual Membership" price on `/donate` |
 | Address (2 lines), city, state, ZIP | `/contact` |
 | Contact email | `/contact` and the site footer |
+| Family, Business Supporter, and Community Champion amounts | `/donate` |
 | Meeting frequency, time, location | `/contact` and `/events` (the "General Membership Meetings" section) |
 | Mission statement | `/about` |
 | Google Calendar embed code | `/events` |
@@ -57,7 +58,7 @@ Upload photos and PDFs for use in any of the content above.
 - **Committees** (`/committees`): page title and the "Want to Get Involved?" banner
 - **Membership** (`/membership`): the hero text and everything except the price/year/renewal/note/PayPal link above, including the "Voting Rights", "Open to All", and "Tax Deductible" boxes, the eligibility text, the sponsorship callout, and the application form's wording and fields
 - **Sponsorship** (`/sponsorship`): the entire page
-- **Donate / Support Us** (`/donate`): the entire page, including the four support levels. Only the "Annual Membership" price comes from Site Settings; the other prices ($30, $100, $250+) are built in
+- **Donate / Support Us** (`/donate`): the entire page, including the four support levels. The amounts on the four cards come from Site Settings (Annual Membership uses the Membership Price); the card names, descriptions, and benefit lists are built in
 - **Volunteer** (`/volunteer`): the entire page, including the list of volunteer opportunities, benefits, and testimonials
 - **Newsletter** (`/newsletter`) and **Team** (`/team`): the entire page
 - **Contact** (`/contact`): the contact form's fields and subject list, the social media links, and the "Looking for Something Specific?" links
@@ -80,7 +81,7 @@ Upload photos and PDFs for use in any of the content above.
 
 ## ⚠️ Things to know
 
-- **The Donate page's other tiers don't match Membership.** The "Family Membership" ($30) tier is built in and doesn't match the per-person model on `/membership`.
+- **The Donate page's "Family Membership" card** still describes household pricing, which doesn't match the per-person model on `/membership`. You can change its amount in Site Settings, but its wording is built in.
 - **Social media links** on `/contact` currently point to the generic Facebook, Twitter, and Instagram home pages.
 - **The contact form and newsletter form** are not yet connected to a form service.
 
