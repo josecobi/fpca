@@ -102,11 +102,19 @@ const committeeChairs = allTeamMembers
           {executiveBoard.map(member => (
             <div class="rounded-2xl shadow-xl overflow-hidden text-center transition-transform hover:scale-105" style="background: linear-gradient(to bottom right, #F5F1E8, #EFE9DC);">
               <div class="aspect-square overflow-hidden" style="background-color: #EFE9DC; border-bottom: 4px solid #C1503D;">
-                <img
-                  src={member.data.image}
-                  alt={member.data.name}
-                  class="w-full h-full object-cover"
-                />
+                {member.data.image ? (
+                  <img
+                    src={member.data.image}
+                    alt={member.data.imageAlt || member.data.name}
+                    class="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div class="w-full h-full flex items-center justify-center">
+                    <span class="text-6xl font-bold" style="font-family: Georgia, serif; color: #1B365D;">
+                      {member.data.name.split(' ').map(n => n[0]).join('')}
+                    </span>
+                  </div>
+                )}
               </div>
               <div class="p-6">
                 <h4 class="text-xl font-bold mb-2" style="font-family: Georgia, serif; color: #3D3D3D;">{member.data.name}</h4>
@@ -124,11 +132,19 @@ const committeeChairs = allTeamMembers
           {boardMembersAtLarge.map(member => (
             <div class="rounded-2xl shadow-xl overflow-hidden text-center transition-transform hover:scale-105" style="background: linear-gradient(to bottom right, #F5F1E8, #EFE9DC);">
               <div class="aspect-square overflow-hidden" style="background-color: #EFE9DC; border-bottom: 4px solid #C1503D;">
-                <img
-                  src={member.data.image}
-                  alt={member.data.name}
-                  class="w-full h-full object-cover"
-                />
+                {member.data.image ? (
+                  <img
+                    src={member.data.image}
+                    alt={member.data.imageAlt || member.data.name}
+                    class="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div class="w-full h-full flex items-center justify-center">
+                    <span class="text-6xl font-bold" style="font-family: Georgia, serif; color: #1B365D;">
+                      {member.data.name.split(' ').map(n => n[0]).join('')}
+                    </span>
+                  </div>
+                )}
               </div>
               <div class="p-6">
                 <h4 class="text-xl font-bold" style="font-family: Georgia, serif; color: #3D3D3D;">{member.data.name}</h4>
@@ -145,11 +161,19 @@ const committeeChairs = allTeamMembers
           {committeeChairs.map(chair => (
             <div class="rounded-2xl shadow-xl overflow-hidden text-center transition-transform hover:scale-105" style="background: linear-gradient(to bottom right, #F5F1E8, #EFE9DC);">
               <div class="aspect-square overflow-hidden" style="background-color: #EFE9DC; border-bottom: 4px solid #C1503D;">
-                <img
-                  src={chair.data.image}
-                  alt={chair.data.name}
-                  class="w-full h-full object-cover"
-                />
+                {chair.data.image ? (
+                  <img
+                    src={chair.data.image}
+                    alt={chair.data.imageAlt || chair.data.name}
+                    class="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div class="w-full h-full flex items-center justify-center">
+                    <span class="text-6xl font-bold" style="font-family: Georgia, serif; color: #1B365D;">
+                      {chair.data.name.split(' ').map(n => n[0]).join('')}
+                    </span>
+                  </div>
+                )}
               </div>
               <div class="p-6">
                 <h4 class="text-xl font-bold mb-2" style="font-family: Georgia, serif; color: #3D3D3D;">{chair.data.name}</h4>

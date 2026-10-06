@@ -186,11 +186,14 @@ content:
         max: 50
       - name: boardCategory
         label: Board Category
-        type: string
+        type: select
         required: true
-        hint: 'Which board group this person belongs to. MUST match one of the categories defined in Site Settings → Board Member Categories. Common values: Executive Board, At-Large, Committee Chair'
-        min: 2
-        max: 50
+        hint: 'Which section of the About page this person appears in.'
+        options:
+          values:
+            - Executive Board
+            - At-Large
+            - Committee Chair
       - name: bio
         label: Short Bio
         type: text
@@ -643,18 +646,6 @@ content:
         hint: 'Paste the FULL Google Calendar embed code here to display your calendar on the Events page. Leave blank to hide the calendar. STEP-BY-STEP INSTRUCTIONS: (1) Open Google Calendar and click the gear icon → Settings. (2) On the left, click your calendar name under "Settings for my calendars". (3) Scroll to "Integrate calendar" section. (4) Copy the ENTIRE text from the "Embed code" box (starts with <iframe src= and ends with </iframe>). (5) Paste it here. The calendar will appear automatically on the Events page once saved!'
         max: 2000
         placeholder: '<iframe src="https://calendar.google.com/calendar/embed?src=..." style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>'
-
-      # TEAM MEMBER SETTINGS — Used on: Team Members dropdown
-      # ============================================
-
-      - name: boardCategories
-        label: '👥 Board Member Categories — Used in: Team Members form'
-        type: list
-        required: true
-        hint: 'List of board categories available in the "Board Category" dropdown when adding/editing team members. Each category on a new line. These categories also control how team members are grouped on the About page.'
-        field:
-          type: string
-          placeholder: 'e.g., Executive Board, At-Large, Committee Chair'
 
       # ============================================
       # ADMIN NOTES (Not displayed on website)
